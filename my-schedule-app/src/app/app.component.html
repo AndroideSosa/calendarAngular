@@ -1,0 +1,95 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- Submenú -->
+<nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Interruptor de Navegación</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://www.gob.mx/senasica">SENASICA</a>
+      </div>
+  </div>
+</nav>
+ <!-- Contenido -->
+ <div class="container">
+  <!-- Breadcrum + Logotipos + Datos de usuario -->
+  <div class="row top-buffer">
+      <div class="col-sm-8">
+          <ol class="breadcrumb">
+              <li><a href="https://www.gob.mx"><i class="icon icon-home"></i></a></li>
+              <li><a href="0b Bienvenida.html">Inicio</a></li>
+              <li>Sistema de Control de Citas</li>
+              <li class="active">Selecciona fecha y horario</li>
+          </ol>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-7" id="logotipos">
+          <img src="assets/img/logos.png" alt="Secretaría de Agricultura y Desarrollo Rural, Servicio Nacional de Sanidad, Inocuidad y Calidad Agroalimentaria" />
+      </div>
+
+  </div>
+
+  <!-- Título -->
+  <div class="row">
+      <div class="col-md-12">
+          <h1>Sistema de Control de Citas</h1>
+      </div>
+  </div>
+  
+  <div class="row">
+      <div class="col-md-12">
+          <ul class="wizard-steps">
+              <li class="completed">
+                  <h5>Paso 1</h5>
+                  <span>Selecciona trámite</span>
+              </li>
+              <li class="completed">
+                  <h5>Paso 2</h5>
+                  <span>Selecciona fecha y horario</span>
+              </li>
+              <li>
+                  <h5>Paso 3</h5>
+                  <span>Ingresa datos personales</span>
+              </li>
+              <li>
+                  <h5>Paso 4</h5>
+                  <span>Confirmación de cita</span>
+              </li>
+          </ul>
+      </div>
+  </div>
+  
+  <div class="row">
+      <div class="col-md-12">
+          <h2>Selecciona fecha y horario</h2>
+          <hr class="red">
+      </div>
+      <div class="col-md-8 small-bottom-buffer">
+          <p><strong>Trámite:</strong><br />DGSA/B00/02/02-01 Consulta de requisitos para movilización de aves no comerciales.</p>
+      </div>
+  </div>
+  
+  <div class="row">
+      <div class="col-sm-8 col-md-8 col-md-offset-2">
+          <div id="foo"></div>
+      </div>
+      <div class="col-md-4 col-md-offset-2 xsmall-top-buffer">
+          <img src="https://framework-gb.cdn.gob.mx/assets/images/semaforo-calendario.png">
+      </div>
+  </div>
+  
+  <div class="row">
+      <div class="col-md-12">
+          <hr>
+          <div class="pull-right">
+              <a href="citas_registro_paso1.html" class="btn btn-default" role="button">Regresar</a> <a href="citas_registro_paso1.html" class="btn btn-default" role="button">Cancelar</a> <a href="citas_registro_paso3.html" class="btn btn-primary" role="button">Siguiente</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
