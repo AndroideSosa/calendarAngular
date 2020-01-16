@@ -73,15 +73,40 @@
       </div>
   </div>
   
-  <div class="row">
-      <div class="col-sm-8 col-md-8 col-md-offset-2">
-          <div id="foo"></div>
-      </div>
-      <div class="col-md-4 col-md-offset-2 xsmall-top-buffer">
-          <img src="https://framework-gb.cdn.gob.mx/assets/images/semaforo-calendario.png">
-      </div>
+<!-- Estructura de tabla de Registro -->
+<div class="col-md-12">
+  <div class="table-responsive">
+    <fieldset [disabled]="showTableData == true">
+          <table class="table table-striped table-bordered">
+            <div></div>
+              <caption>ENERO</caption>
+              <thead>
+                  <tr>
+                      <th class="text-center">lun.</th>
+                      <th class="text-center">mar.</th>
+                      <th class="text-center">mié.</th>
+                      <th class="text-center">juev.</th>
+                      <th class="text-center">vie.</th>
+                      <th class="text-center">sàb.</th>
+                      <th class="text-center">dom</th>
+                  </tr>
+              </thead>
+              <tbody>    
+                  <tr *ngFor="let monday of mondayArray">
+                      <td>{{monday}}</td>
+                  </tr>
+                      <td>{{1}}</td>
+                      <td>{{2}}</td>
+                      <td>{{2}}</td>
+                      <td>{{2}}</td>
+                      <td>{{2}}</td>
+                      <td>{{2}}</td>
+              </tbody>
+          </table>
+  </fieldset>
   </div>
-  
+</div>
+
   <div class="row">
       <div class="col-md-12">
           <hr>
@@ -91,5 +116,6 @@
       </div>
   </div>
 </div>
+<br>
 
 <router-outlet></router-outlet>
