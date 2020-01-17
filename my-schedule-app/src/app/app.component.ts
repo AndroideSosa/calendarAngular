@@ -93,12 +93,16 @@ export class AppComponent implements OnInit {
   public currentMonthArray = [];
   public currentMonthTitle: string = null;
   public currentYearTitle: string = null;
+  public previousMonthTitle: string = null;
+  public nextMonthTitle: string = null;
 
   ngOnInit() {
    console.log(this.mesesArray[0])
    this.currentMonthArray = this.mesesArray[0];
    this.currentMonthTitle = this.currentMonthArray.name;
    this.currentYearTitle = this.currentMonthArray.year;
+   this.previousMonthTitle = this.currentMonthArray.previousMonth;
+   this.nextMonthTitle = this.currentMonthArray.nextMonth;
    this.mondayArray = this.mesesArray[0].monday;
    console.log(this.mondayArray);
   }

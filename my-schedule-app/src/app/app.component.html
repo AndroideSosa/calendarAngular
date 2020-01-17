@@ -95,9 +95,9 @@
 <div class="row calendar">
 <div class="col-md-8 col-md-offset-2">
   <div class="row">
-      <div class="col-xs-2 anteior"> <a href="">Octubre</a> </div>
+      <div class="col-xs-2 anteior"> <a>{{previousMonthTitle}}</a> </div>
       <div class="col-xs-3 actual"> <h4>{{currentMonthTitle}} {{currentYearTitle}}</h4> </div>
-      <div class="col-xs-2 siguiente"> <a href="">Diciembre</a> </div>
+      <div class="col-xs-2 siguiente"> <a>{{nextMonthTitle}}</a> </div>
   </div>
  
   <div class="clearfix"></div>
@@ -110,118 +110,43 @@
       <div class="col-xs-1 content-day">
         <span>Mar.</span>
          <div class="day" *ngFor="let days of mesesArray[0].tuesday">
-              <span>{{days.day}}</span>
+              <span (click)="prueba(days.day)">{{days.day}}</span>
          </div>
       </div>
       <div class="col-xs-1 content-day">
         <span>Mie.</span>
          <div class="day" *ngFor="let days of mesesArray[0].wednesday">
-              <span>{{days.day}}</span>
+              <span (click)="prueba(days.day)">{{days.day}}</span>
          </div>
       </div>
       <div class="col-xs-1 content-day">
         <span>Jue.</span>
          <div class="day" *ngFor="let days of mesesArray[0].thursday">
-              <span>{{days.day}}</span>
+              <span (click)="prueba(days.day)">{{days.day}}</span>
          </div>
       </div>
       <div class="col-xs-1 content-day">
         <span>Vie.</span>
          <div class="day" *ngFor="let days of mesesArray[0].friday">
-              <span>{{days.day}}</span>
+              <span (click)="prueba(days.day)">{{days.day}}</span>
          </div>
       </div>
       <div class="col-xs-1 content-day">
         <span>Sab.</span>
          <div class="day" *ngFor="let days of mesesArray[0].saturday">
-              <span>{{days.day}}</span>
+              <span (click)="prueba(days.day)">{{days.day}}</span>
          </div>
       </div>
       <div class="col-xs-1 content-day">
         <span>Dom.</span>
          <div class="day" *ngFor="let days of mesesArray[0].sunday">
-              <span>{{days.day}}</span>
+              <span (click)="prueba(days.day)">{{days.day}}</span>
          </div>
       </div>
 </div>
 </div>
 
- <!-- Estructura del calendario 
-<div class="col-sm-12">
-    
-                  <table class="cal-table">
-                      <tbody><tr>
-                          <th>DOM</th>
-                          <th>LUN</th>
-                          <th>MAR</th>
-                          <th>MIE</th>
-                          <th>JUE</th>
-                          <th>VIE</th>
-                          <th>SAB</th>
-                      </tr>
-                  <tr height="110px">
-                      <td width="140px" style="border: 1px solid rgba(84, 84, 84, 1);"></td>
-                      <td width="140px" style="border: 1px solid rgba(84, 84, 84, 1);"></td>
-                      <td width="140px" style="border: 1px solid rgba(84, 84, 84, 1);"></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>01</div></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>02</div></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>03</div></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>04</div></td>
-                  </tr>
-                  <tr height="110px">
-                      <td width="140px" class="cal-sin-disponibilidad"><div>05</div></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>06</div></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>07</div></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>08</div></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>09</div></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>10</div></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>11</div></td>
-                  </tr>
-                  <tr height="110px">
-                      <td width="140px" class="cal-sin-disponibilidad"><div>12</div></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>13</div></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>14</div></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>15</div></td>
-                      <td width="140px" class="cal-actual"><div>16</div></td>
-                      <td width="140px" class="cal-con-disponibilidad"><div><a href="crm_citas.php?tipo=TRAMITE&amp;codigo=80010-2&amp;nombre=DGSA%2FB00%2F02%2F02-01+Consulta+de+requisitos+para+movilizaci%C3%B3n+de+aves+no+comerciales++-+TRAMITE&amp;fecha=17%2F01%2F2020&amp;dia_num=6&amp;direccion=96" name="dia_seleccionado" onclick="daclick(this, '')" title="Horarios">17</a></div></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>18</div></td>
-                  </tr>
-                  <tr height="110px">
-                      <td width="140px" class="cal-sin-disponibilidad"><div>19</div></td>
-                      <td width="140px" class="cal-con-disponibilidad"><div><a href="crm_citas.php?tipo=TRAMITE&amp;codigo=80010-2&amp;nombre=DGSA%2FB00%2F02%2F02-01+Consulta+de+requisitos+para+movilizaci%C3%B3n+de+aves+no+comerciales++-+TRAMITE&amp;fecha=20%2F01%2F2020&amp;dia_num=2&amp;direccion=96" name="dia_seleccionado" onclick="daclick(this, '')" title="Horarios">20</a></div></td>
-                      <td width="140px" class="cal-con-disponibilidad"><div><a href="crm_citas.php?tipo=TRAMITE&amp;codigo=80010-2&amp;nombre=DGSA%2FB00%2F02%2F02-01+Consulta+de+requisitos+para+movilizaci%C3%B3n+de+aves+no+comerciales++-+TRAMITE&amp;fecha=21%2F01%2F2020&amp;dia_num=3&amp;direccion=96" name="dia_seleccionado" onclick="daclick(this, '')" title="Horarios">21</a></div></td>
-                      <td width="140px" class="cal-con-disponibilidad"><div><a href="crm_citas.php?tipo=TRAMITE&amp;codigo=80010-2&amp;nombre=DGSA%2FB00%2F02%2F02-01+Consulta+de+requisitos+para+movilizaci%C3%B3n+de+aves+no+comerciales++-+TRAMITE&amp;fecha=22%2F01%2F2020&amp;dia_num=4&amp;direccion=96" name="dia_seleccionado" onclick="daclick(this, '')" title="Horarios">22</a></div></td>
-                      <td width="140px" class="cal-con-disponibilidad"><div><a href="crm_citas.php?tipo=TRAMITE&amp;codigo=80010-2&amp;nombre=DGSA%2FB00%2F02%2F02-01+Consulta+de+requisitos+para+movilizaci%C3%B3n+de+aves+no+comerciales++-+TRAMITE&amp;fecha=23%2F01%2F2020&amp;dia_num=5&amp;direccion=96" name="dia_seleccionado" onclick="daclick(this, '')" title="Horarios">23</a></div></td>
-                      <td width="140px" class="cal-con-disponibilidad"><div><a href="crm_citas.php?tipo=TRAMITE&amp;codigo=80010-2&amp;nombre=DGSA%2FB00%2F02%2F02-01+Consulta+de+requisitos+para+movilizaci%C3%B3n+de+aves+no+comerciales++-+TRAMITE&amp;fecha=24%2F01%2F2020&amp;dia_num=6&amp;direccion=96" name="dia_seleccionado" onclick="daclick(this, '')" title="Horarios">24</a></div></td>
-                      <td width="140px" class="cal-sin-disponibilidad"><div>25</div></td>
-                  </tr>
-                  <tr height="110px">
-                      <td width="140px" class="cal-sin-disponibilidad"><div>26</div></td>
-                      <td width="140px" class="cal-con-disponibilidad"><div><a href="crm_citas.php?tipo=TRAMITE&amp;codigo=80010-2&amp;nombre=DGSA%2FB00%2F02%2F02-01+Consulta+de+requisitos+para+movilizaci%C3%B3n+de+aves+no+comerciales++-+TRAMITE&amp;fecha=27%2F01%2F2020&amp;dia_num=2&amp;direccion=96" name="dia_seleccionado" onclick="daclick(this, '')" title="Horarios">27</a></div></td>
-                      <td width="140px" class="cal-con-disponibilidad"><div><a href="crm_citas.php?tipo=TRAMITE&amp;codigo=80010-2&amp;nombre=DGSA%2FB00%2F02%2F02-01+Consulta+de+requisitos+para+movilizaci%C3%B3n+de+aves+no+comerciales++-+TRAMITE&amp;fecha=28%2F01%2F2020&amp;dia_num=3&amp;direccion=96" name="dia_seleccionado" onclick="daclick(this, '')" title="Horarios">28</a></div></td>
-                      <td width="140px" class="cal-con-disponibilidad"><div><a href="crm_citas.php?tipo=TRAMITE&amp;codigo=80010-2&amp;nombre=DGSA%2FB00%2F02%2F02-01+Consulta+de+requisitos+para+movilizaci%C3%B3n+de+aves+no+comerciales++-+TRAMITE&amp;fecha=29%2F01%2F2020&amp;dia_num=4&amp;direccion=96" name="dia_seleccionado" onclick="daclick(this, '')" title="Horarios">29</a></div></td>
-                      <td width="140px" class="cal-con-disponibilidad"><div><a href="crm_citas.php?tipo=TRAMITE&amp;codigo=80010-2&amp;nombre=DGSA%2FB00%2F02%2F02-01+Consulta+de+requisitos+para+movilizaci%C3%B3n+de+aves+no+comerciales++-+TRAMITE&amp;fecha=30%2F01%2F2020&amp;dia_num=5&amp;direccion=96" name="dia_seleccionado" onclick="daclick(this, '')" title="Horarios">30</a></div></td>
-                      <td width="140px" class="cal-con-disponibilidad"><div><a href="crm_citas.php?tipo=TRAMITE&amp;codigo=80010-2&amp;nombre=DGSA%2FB00%2F02%2F02-01+Consulta+de+requisitos+para+movilizaci%C3%B3n+de+aves+no+comerciales++-+TRAMITE&amp;fecha=31%2F01%2F2020&amp;dia_num=6&amp;direccion=96" name="dia_seleccionado" onclick="daclick(this, '')" title="Horarios">31</a></div></td>
-                      <td width="140px" style="border: 1px solid rgba(84, 84, 84, 1);"></td>
-                  </tr>
-                  </tbody></table>
-                  <p>
-                      </p><div class="linea">
-                          <div class="item">
-                              <span class="cal-actual">[  ]</span> Día Actual
-                          </div>
-                          <div class="item">
-                              <span class="cal-con-disponibilidad">[  ]</span> Disponibilidad
-                          </div>
-                          <div class="item">
-                              <span class="cal-sin-disponibilidad">[  ]</span> Sin disponibilidad
-                          </div>
-                          
-                      </div>
-                  <p></p>				
-                  </div>
 
-                  -->
 <button type="button" data-toggle="modal">Abrir ventana modal</button>
 
 
